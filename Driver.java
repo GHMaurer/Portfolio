@@ -1,6 +1,4 @@
-//Final Exam College Student Record 
-//December 17, 2019 
-//Michele Vulcano Hall 
+
 import java.util.Scanner;
 
 public class Driver {
