@@ -1,0 +1,23 @@
+#this is a very basic python program that is designed to take an inventory and hol it in a dictionary so that 
+#it can be accessed to find the location, price, and quantity
+
+inventory = {}
+details = []
+while True:
+    #takes in information about the object
+    item = input("Item: ")
+    amount = int(input("Amount: "))
+    price = float(input("Price: "))
+    place = input("Location: ")
+    #puts the info in an array that can be held to relate to the name of the object
+    details = [amount, price, place]
+    #stores the object and the details of the object in the dictionary together
+    inventory[item] = details
+    
+    yesorno = input("Add another item? ")
+    if yesorno == "no":
+        break
+#just tests to see if the dictionary works
+whichitem = input("Which item would you like to check stock on? ")
+print inventory[whichitem]
+print inventory
