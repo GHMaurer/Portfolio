@@ -1,0 +1,36 @@
+#this is a program i made for an electronic application that the class was making for my school.
+#it is made to verify that the bith date they were inputting is valid.
+
+#stores every month, based on the order that the months are in, except february, in arrays that tell whether they have 30 or 31 days
+thirtyOneMonths = [1, 3, 5, 7, 9, 11]
+thirtyMonths = [4, 6, 8, 10, 12]
+
+#checks if it is a leap year by checking if it is divisible by 4 but not divisible by 100
+def checkLeap(year):
+    if(year % 4 == 0 && year % 100 != 0):
+        return True
+
+
+#takes the month day and year and puts that through various if else loops to find out if the number of days matches which month it is.
+#for example, they cant put february 30th or april 31st
+def dateValid(day, month, year):
+    if month in thirtyMonths:
+        if(day < 31 and day > 0):
+            return True
+        else:
+            return False
+    elif month in thirtyOneMonths:
+        if(day < 32 and day > 0):
+            return True
+        else:
+            return False
+    elif(month == 2):
+        if(checkLeap(year)):
+            return True
+        else:
+            return False
+#tests to make sure the validator works            
+if(dateValid(29, 2, 2005)):
+    print "yes"
+else:
+    print "no"
