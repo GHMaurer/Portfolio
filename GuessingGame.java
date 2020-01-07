@@ -1,7 +1,4 @@
-//Michele Vulcano
-//Guessing Game  MidTerm Programming Project 
-//Purpose: Random number guessing with 1-10 premeters. Just something fun. 
-//October 19, 2019 
+
 
 import java.util.Scanner;
 
